@@ -32,11 +32,15 @@ def weatherUpdate():
     condition = location.condition()
     return condition
 
-while True:
-    wet = weatherUpdate()
-    temp = int(wet.temp()) if wet != None else -1
-    if temp < 0:
-        drawPic(Pics.retNum(temp, 0, 153, 255))
-    else:
-        drawPic(Pics.retNum(temp, 255, 255, 204))
-    sleep(1800)
+def mainFunction():
+    while True:
+        wet = weatherUpdate()
+        temp = int(wet.temp()) if wet != None else -1
+        if temp < 0:
+            drawPic(Pics.retNum(temp, 0, 153, 255))
+        else:
+            drawPic(Pics.retNum(temp, 255, 255, 204))
+        sleep(1800)
+
+if __name__ == "__main__":
+    mainFunction()
