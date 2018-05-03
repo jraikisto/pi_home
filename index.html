@@ -4,10 +4,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <button onclick="tellWeather()">Weather</button>
 <button onclick="lamp()">Lamp</button>
+<div id="div1"><h2>asdasdasd</h2></div>
+<button type="button" onclick="loadDoc()">Change Content</button>
 
 
 <script>
-function tellWeather(){
+/*function tellWeather(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -27,6 +29,27 @@ function lamp(){
   xhttp.open("POST", "./python/lamp.py", true);
   xhttp.send();
 }
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}*/
+
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "python/weatherMain.py", type: "POST", success: function(result){
+            $("#div1").html("qweqweqwe");
+        }});
+    });
+});
 </script>
 
 </body>
