@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 from time import sleep
 from random import randint
 import unicornhat as unicorn
