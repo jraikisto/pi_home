@@ -3,6 +3,7 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <button onclick="tellWeather()">Weather</button>
+<button onclick="lamp()">Lamp</button>
 
 
 <script>
@@ -14,6 +15,16 @@ function tellWeather(){
     }
   };
   xhttp.open("POST", "./python/weatherMain.py", true);
+  xhttp.send();
+}
+function lamp(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("It came back!")
+    }
+  };
+  xhttp.open("POST", "./python/lamp.py", true);
   xhttp.send();
 }
 </script>
