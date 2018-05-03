@@ -5,7 +5,6 @@
 <button onclick="tellWeather()">Weather</button>
 <button onclick="lamp()">Lamp</button>
 <div id="div1"><h2>asdasdasd</h2></div>
-<button type="button" onclick="loadDoc()">Change Content</button>
 
 
 <script>
@@ -45,7 +44,7 @@ function loadDoc() {
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "python/weatherMain.py", type: "POST", success: function(result){
+        $.ajax({url: "./python/weatherMain.py", type: "POST", success: function(result){
             $("#div1").html("qweqweqwe");
         }});
     });
