@@ -44,7 +44,7 @@ function loadDoc() {
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "./python/weatherMain.py", type: "POST", success: function(result){
+        $.ajax({url: "192.168.10.53/pi_home/python/weatherMain.py", type: "POST", success: function(result){
             $("#div1").html("qweqweqwe");
         }});
     });
