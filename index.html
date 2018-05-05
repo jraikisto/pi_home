@@ -2,49 +2,13 @@
 <html>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<button onclick="tellWeather()">Weather</button>
-<button onclick="lamp()">Lamp</button>
+<button>Weather</button>
+<button>Lamp</button>
 <div id="div1"><h2>asdasdasd</h2></div>
-
-
-<script>
-/*function tellWeather(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      alert("It came back!")
-    }
-  };
-  xhttp.open("POST", "./python/weatherMain.py", true);
-  xhttp.send();
-}
-function lamp(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      alert("It came back!")
-    }
-  };
-  xhttp.open("POST", "./python/lamp.py", true);
-  xhttp.send();
-}
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}*/
-
-</script>
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "192.168.10.53/pi_home/python/weatherMain.py", type: "POST", success: function(result){
+        $.ajax({url: "python/lamp.py", type: "POST", success: function(result){
             $("#div1").html("qweqweqwe");
         }});
     });
