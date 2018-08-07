@@ -18,7 +18,7 @@ function gotSuccesfully(result){
 
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "python/lamp.py", type: "POST",
+        $.ajax({url: "cgi/lamp.py", type: "POST",
         error: function(xhr){gotBack(xhr)},
         success: function(result){gotSuccesfully(result)}
     });
