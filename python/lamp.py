@@ -18,4 +18,5 @@ for h in range(uh_height):
         unicorn.set_pixel(w, h, 255, 0, 0)
 
 unicorn.show()
+print("red is good")
 sleep(3600)
