@@ -7,14 +7,18 @@
 <div id="div1"><h2>this change?</h2></div>
 <script>
 
-function onSuccess(result){
+function gotBack(result){
   $("#div1").html("qweqweqwe");
-  alert(result);
+  alert(result.status);
+}
+
+function gotSuccesfully(result){
+  alert("qweqwe");
 }
 
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", complete: onSuccess(xhr)
+        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", error: gotBack(xhr), success: gotSuccesfully(result)
     });
     });
 });
