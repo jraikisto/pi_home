@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# -*- coding: UTF-8 -*-# enable debugging
+
 from time import sleep
 import unicornhat as unicorn
 import cgi, cgitb
