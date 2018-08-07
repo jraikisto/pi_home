@@ -18,7 +18,7 @@ function gotSuccesfully(result){
 
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET",
+        $.ajax({url: "192.168.10.54/pi_home/python/lamp.py", type: "GET",
         error: function(xhr){gotBack(xhr)},
         success: function(result){gotSuccesfully(result)}
     });
