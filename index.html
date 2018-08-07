@@ -6,12 +6,16 @@
 <button>Lamp</button>
 <div id="div1"><h2>this change?</h2></div>
 <script>
+
+function onSuccess(result){
+  $("#div1").html("qweqweqwe");
+  alert(result);
+}
+
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", success: function(result){
-            $("#div1").html("qweqweqwe");
-            alert(result);
-        }});
+        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", complete: onSuccess(xhr)
+    });
     });
 });
 </script>
