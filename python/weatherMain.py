@@ -7,6 +7,7 @@ import unicornhat as unicorn
 from weather import Weather
 from pics import Pics
 import math
+import cgi, cgitb
 
 unicorn.set_layout(unicorn.AUTO)
 unicorn.rotation(180)

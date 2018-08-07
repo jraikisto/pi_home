@@ -2,6 +2,9 @@
 
 from time import sleep
 import unicornhat as unicorn
+import cgi, cgitb
+
+cgitb.enable()
 
 unicorn.set_layout(unicorn.AUTO)
 unicorn.rotation(180)
