@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 # -*- coding: UTF-8 -*-# enable debugging
-
+import cgitb
+cgitb.enable()
+print("asd")
 from time import sleep
 import unicornhat as unicorn
-import cgi, cgitb
 
-cgitb.enable()
 
 unicorn.set_layout(unicorn.AUTO)
 unicorn.rotation(180)
