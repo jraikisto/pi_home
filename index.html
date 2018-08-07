@@ -7,9 +7,9 @@
 <div id="div1"><h2>this change?</h2></div>
 <script>
 
-function gotBack(status, error){
+function gotBack(status){
   $("#div1").html("qweqweqwe");
-  alert(status + " " + error);
+  alert(status);
 }
 
 function gotSuccesfully(result){
@@ -18,7 +18,7 @@ function gotSuccesfully(result){
 
 $(document).ready(function(){
     $("button").click(function(){
-        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", error: gotBack(status, error), success: gotSuccesfully(result)
+        $.ajax({url: "/var/www/html/pi_home/python/lamp.py", type: "GET", error: gotBack(status), success: gotSuccesfully(result)
     });
     });
 });
